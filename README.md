@@ -17,7 +17,8 @@ Here's an example that configures a department with pre-defined values and assoc
     l_department t_department := t_department();
   BEGIN
     l_department := l_department.with_deptno( 1 ).with_dname( 'Test' ).with_loc( 'UK' )
-                      .with_empno( 10 ).with_ename( 'Josephine' ).with_job( 'MANAGER' ).with_mgr( NULL ).with_hiredate( TO_DATE('01/01/2019','DD/MM/YYYY') ).with_sal ( 999 ). with_comm( 999 ).build();
+                      .with_empno( 10 ).with_ename( 'Josephine' ).with_job( 'MANAGER' ).with_mgr( NULL ).with_hiredate( TO_DATE('01/01/2019','DD/MM/YYYY') ).with_sal ( 999 ). with_comm( 999 )
+                      .build();
 
     -- take an action against the item under test
     
@@ -35,7 +36,7 @@ Here's an example that configures a department with pre-defined values and assoc
 
 There are two main sources for the inspiration behind the idea of a data API:
 
-1. The book Working Effectively with Unit Tests, by Jay Fields
+1. Working Effectively with Unit Tests, by Jay Fields
 2. Growing Object-Oriented Software, Guided by Tests, by Steve Freeman and Nat Pryce
 
 Plus a blog post by Nat Pryce [on the same subject.](http://www.natpryce.com/articles/000714.html)
